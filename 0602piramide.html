@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" onclick="listar()" value="LISTAR" />
+    <pre id="listagem"> <!--chamando a id aqui, acho que para não precisa do src-->
+        </pre>
+    <script>
+        function listar() {
+            //criando a piramedi com laço for
+            var lista = document.getElementById("listagem"); //criando id aqui
+            lista.innerHTML = ""; //Limpar listagem para reiniciar
+            for (i = 1; i <= 5; i++) { //forzão for pai, i = 1, enquanto i for maior ou igual que 5 
+                //(ou seja não, vai para o filho), contador
+
+
+                for (j = 1; j <= i; j++) { //forzinho for filho // j é igual 1, 1 é igual ou maior que 1
+                    //que é verdadeiro, então faz, conta 1+1, assim criando loop até 5 //ele faz e outro não
+                    //até 5
+                    lista.innerHTML += " * ";
+
+                }
+                lista.innerHTML += "\n"; //paragrafo
+            }
+        }
+    </script>
+</body>
+
+</html>

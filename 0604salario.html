@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script src="salarioalt.js"></script>
+
+<script>
+
+    function salarioalt() { // Sim, é possível usar acentuação//funcao vazia tem que repitir
+        let salario = parseFloat(prompt("Digite o salario"))
+        let alternativa = prompt('Digite o plano:\n A = 10% \n B = 15% \n C = 20%') // \n quebra a linha
+        switch (alternativa.toUpperCase()) { // O método toUpperCase() transforma todas as letras de uma string para maiúsculas
+            case 'A':  // Podemos testar múltiplos casos em uma mesma linha, desse jeito
+                window.alert("o seu salario é" + ((salario * 1.10).toFixed(2))) //fazer dois numerops
+                break // Nunca se esqueça do break!!!
+
+            case 'B':  // Podemos testar múltiplos casos em uma mesma linha, desse jeito
+                window.alert("o seu salario é" + ((salario * 1.15).toFixed(2)))
+                break // Nunca se esqueça do break!!!
+
+            case 'C':  // Podemos testar múltiplos casos em uma mesma linha, desse jeito
+                window.alert("o seu salario é" + ((salario * 1.20).toFixed(2)))
+
+                break // Nunca se esqueça do break!!!
+
+            default:
+                window.alert("Digite A, B ou C");
+                break;
+        }
+
+    }
+    salarioalt() //como é função void tem que repitir senão não funciona
+
+</script>
+</body>
+
+</html>

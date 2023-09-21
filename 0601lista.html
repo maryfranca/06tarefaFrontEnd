@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu de Opções</title>
+</head>
+<body>
+  <button id="botao" onclick="exibirMenu()">Clique aqui</button>
+  <div id="resultado"></div>
+
+  <script>
+    function exibirMenu() {
+      var escolha = prompt("Escolha na lista o que você quer que se faça:\n\n1 - Imprimir números de 1 a 10\n2 - Imprimir os números ímpares menores que 100\n3 - Imprimir a tabuada do número 8\n4 - Imprimir todas as tabuadas do número 1 ao 10");
+
+      switch (escolha) {
+        case "1":
+          imprimirNumerosDeUmADez();
+          break;
+        case "2":
+          imprimirNumerosImpares();
+          break;
+        case "3":
+          imprimirTabuadaDoOito();
+          break;
+        case "4":
+          imprimirTodasTabuadas();
+          break;
+        default:
+          alert("Opção inválida!");
+      }
+    }
+    //resultado = resultado + i
+    //colocar na tela de um a dez
+    function imprimirNumerosDeUmADez() {
+      var resultado = "";
+      for (var i = 1; i <= 10; i++) {
+        resultado += i + " ";
+      }
+      exibirResultado(resultado); // A função lá para imprimir o resultado na tela
+    }
+
+    //colocar numeros impares
+    function imprimirNumerosImpares() {
+      var resultado = "";
+      for (var i = 1; i < 100; i += 2) {
+        resultado += i + " ";
+      }
+      exibirResultado(resultado);
+    }
+
+    //tabuada só de 8
+    function imprimirTabuadaDoOito() {
+      var resultado = "";
+      for (var i = 1; i <= 10; i++) {
+        resultado += "8 x " + i + " = " + (8 * i) + "\n";
+      }
+      exibirResultado(resultado);
+    }
+
+    //todas tabuadas
+    function imprimirTodasTabuadas() {
+      var resultado = "";
+      for (var i = 1; i <= 10; i++) {
+        resultado += "Tabuada do " + i + ":\n";
+        for (var j = 1; j <= 10; j++) {
+          resultado += i + " x " + j + " = " + (i * j) + "\n";
+        }
+        resultado += "\n";
+      }
+      exibirResultado(resultado);
+    }
+
+    function exibirResultado(resultado) { //printar na tela o Dom aqui
+      var resultadoElemento = document.getElementById("resultado");//estou pegando a minha id
+      resultadoElemento.innerText = resultado;
+    }
+  </script>
+</body>
+</html>

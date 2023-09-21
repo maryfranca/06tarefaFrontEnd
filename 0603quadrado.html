@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="listar()" value="LISTAR" />
+        <pre id="listagem"> <!--chamando a id aqui, acho que para não precisa do src-->
+        </pre>
+    <script>
+        function listar(){
+            //criando a piramedi com laço for
+        var lista = document.getElementById("listagem"); //criando id aqui
+        lista.innerHTML = ""; //Limpar listagem para reiniciar
+            for(i=1;i<=4;i++){ //forzão for pai, i = 1 e continua enquanto i for menor ou igual a 4
+                 //contador //for é o lance do while :O for em ingles é durante
+                
+                
+                
+                    for(j=1;j<=4;j++){ //forzinho for filho // j é igual 1 e continua enquanto j for maior ou igual 4, loop+1
+                         lista.innerHTML += " # ";
+                             
+                    }
+                        lista.innerHTML += "\n"; //paragrafo //aqui quebra a linha
+            }
+}
+    </script>
+</body>
+</html>
